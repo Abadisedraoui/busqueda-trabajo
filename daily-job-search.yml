@@ -1,0 +1,52 @@
+name: Daily job search
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "15 7 * * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: daily-job-search
+  cancel-in-progress: false
+
+jobs:
+  search:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: "pip"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          python -m playwright install --with-deps chromium
+
+      - name: Run offline tests
+        run: python -m unittest discover -s tests -v
+
+      - name: Check every company
+        run: python check_all_companies.py --browser
+
+      - name: Commit results if changed
+        run: |
+          git config user.name "job-search-bot"
+          git config user.email "job-search-bot@users.noreply.github.com"
+          git add nuevas_ofertas.csv all_open_design_jobs.csv ofertas_vistas.csv coverage_report.csv resolution_cache.json daily_search_report.md dashboard.html
+          if git diff --cached --quiet; then
+            echo "No changes"
+          else
+            git commit -m "job search $(date -u +'%Y-%m-%d')"
+            git push
+          fi
