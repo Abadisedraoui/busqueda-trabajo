@@ -3,7 +3,8 @@ name: Daily job search
 on:
   workflow_dispatch:
   schedule:
-    - cron: "15 7 * * *"
+    - cron: "15 9 * * *"
+      timezone: "Europe/Madrid"
 
 permissions:
   contents: write
@@ -34,12 +35,34 @@ jobs:
           python -m playwright install --with-deps chromium
 
       - name: Run offline tests
-        run: python -m unittest discover -s tests -v
+        run: python -m unittest -v test_job_search.py
 
       - name: Check every company
         run: python check_all_companies.py --browser
 
+      - name: Add report to Actions summary
+        if: success()
+        run: |
+          echo "# Daily job search report" >> "$GITHUB_STEP_SUMMARY"
+          echo "" >> "$GITHUB_STEP_SUMMARY"
+          cat daily_search_report.md >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Upload reports
+        if: success()
+        uses: actions/upload-artifact@v4
+        with:
+          name: job-search-report-${{ github.run_number }}
+          path: |
+            daily_search_report.md
+            dashboard.html
+            nuevas_ofertas.csv
+            all_open_design_jobs.csv
+            coverage_report.csv
+          if-no-files-found: warn
+          retention-days: 30
+
       - name: Commit results if changed
+        if: success()
         run: |
           git config user.name "job-search-bot"
           git config user.email "job-search-bot@users.noreply.github.com"
@@ -47,6 +70,6 @@ jobs:
           if git diff --cached --quiet; then
             echo "No changes"
           else
-            git commit -m "job search $(date -u +'%Y-%m-%d')"
+            git commit -m "job search $(date +'%Y-%m-%d')"
             git push
           fi
