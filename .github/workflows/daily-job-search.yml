@@ -3,8 +3,10 @@ name: Daily job search
 on:
   workflow_dispatch:
   schedule:
-    - cron: "15 9 * * *"
-      timezone: "Europe/Madrid"
+    - cron: "15 7 * * *"
+  push:
+    paths:
+      - ".github/workflows/daily-job-search.yml"
 
 permissions:
   contents: write
@@ -35,7 +37,7 @@ jobs:
           python -m playwright install --with-deps chromium
 
       - name: Run offline tests
-        run: python -m unittest -v test_job_search.py
+        run: python test_job_search.py
 
       - name: Check every company
         run: python check_all_companies.py --browser
@@ -70,6 +72,6 @@ jobs:
           if git diff --cached --quiet; then
             echo "No changes"
           else
-            git commit -m "job search $(date +'%Y-%m-%d')"
+            git commit -m "job search $(date -u +'%Y-%m-%d')"
             git push
           fi
