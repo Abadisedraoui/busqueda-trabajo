@@ -7,6 +7,8 @@ on:
   push:
     paths:
       - ".github/workflows/daily-job-search.yml"
+      - "make_shard.py"
+      - "merge_shards.py"
 
 permissions:
   contents: write
@@ -16,9 +18,33 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  search:
+  test:
     runs-on: ubuntu-latest
-    timeout-minutes: 120
+    timeout-minutes: 15
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: "pip"
+      - name: Install Python dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+      - name: Run offline tests
+        run: python test_job_search.py
+
+  search:
+    needs: test
+    runs-on: ubuntu-latest
+    timeout-minutes: 300
+    strategy:
+      fail-fast: false
+      max-parallel: 8
+      matrix:
+        shard: [0, 1, 2, 3, 4, 5, 6, 7]
 
     steps:
       - name: Checkout
@@ -36,21 +62,86 @@ jobs:
           pip install -r requirements.txt
           python -m playwright install --with-deps chromium
 
-      - name: Run offline tests
-        run: python test_job_search.py
+      - name: Build shard watchlist
+        run: |
+          python make_shard.py --index ${{ matrix.shard }} --count 8 --output shard_watchlist.xlsx
 
-      - name: Check every company
-        run: python check_all_companies.py --browser
+      - name: Clear previous generated outputs
+        run: |
+          rm -f nuevas_ofertas.csv all_open_design_jobs.csv coverage_report.csv daily_search_report.md dashboard.html
+
+      - name: Check shard companies
+        run: |
+          PYTHONUNBUFFERED=1 python check_all_companies.py --browser --watchlist shard_watchlist.xlsx
+
+      - name: Upload shard results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: job-search-shard-${{ matrix.shard }}
+          path: |
+            nuevas_ofertas.csv
+            all_open_design_jobs.csv
+            coverage_report.csv
+            resolution_cache.json
+          if-no-files-found: warn
+          retention-days: 7
+
+  merge:
+    needs: search
+    if: always()
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Checkout latest repository
+        uses: actions/checkout@v4
+        with:
+          ref: master
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: "pip"
+
+      - name: Install Python dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Download all shard results
+        uses: actions/download-artifact@v4
+        with:
+          pattern: job-search-shard-*
+          path: shards
+
+      - name: Merge reports
+        run: python merge_shards.py
+
+      - name: Validate coverage
+        run: |
+          python - <<'PY'
+          import csv
+          from openpyxl import load_workbook
+          wb = load_workbook('watchlist_consolidado.xlsx', read_only=True, data_only=True)
+          expected = sum(1 for row in wb['watchlist'].iter_rows(min_row=2, values_only=True) if row and row[0])
+          with open('coverage_report.csv', encoding='utf-8-sig', newline='') as f:
+              actual = sum(1 for _ in csv.DictReader(f))
+          print(f'Coverage rows: {actual}/{expected}')
+          if actual != expected:
+              raise SystemExit(f'Incomplete coverage: {actual}/{expected}')
+          PY
 
       - name: Add report to Actions summary
-        if: success()
+        if: always()
         run: |
           echo "# Daily job search report" >> "$GITHUB_STEP_SUMMARY"
           echo "" >> "$GITHUB_STEP_SUMMARY"
-          cat daily_search_report.md >> "$GITHUB_STEP_SUMMARY"
+          if [ -f daily_search_report.md ]; then cat daily_search_report.md >> "$GITHUB_STEP_SUMMARY"; fi
 
-      - name: Upload reports
-        if: success()
+      - name: Upload final report
+        if: always()
         uses: actions/upload-artifact@v4
         with:
           name: job-search-report-${{ github.run_number }}
@@ -63,8 +154,7 @@ jobs:
           if-no-files-found: warn
           retention-days: 30
 
-      - name: Commit results if changed
-        if: success()
+      - name: Commit results if complete
         run: |
           git config user.name "job-search-bot"
           git config user.email "job-search-bot@users.noreply.github.com"
