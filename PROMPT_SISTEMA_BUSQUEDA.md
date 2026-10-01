@@ -23,6 +23,14 @@ Cada fila de `watchlist_consolidado.xlsx` debe terminar cada día en uno de esto
 **Nunca se puede saltar una empresa en silencio.** Debe existir un informe de cobertura con una fila por empresa para poder comprobar cuántas se han revisado realmente.
 
 ## Cómo buscar
+
+La búsqueda tiene dos capas:
+
+- **Barrido abierto del mercado** para descubrir empresas y vacantes fuera de la watchlist. Usar activamente LinkedIn, Indeed, Glassdoor, InfoJobs, Jobgether, Google Jobs, **IxDF Jobs** y **Wellfound**, además de otros portales relevantes.
+- **Watchlist** para revisar las empresas conocidas mediante sus páginas oficiales y ATS.
+
+IxDF y Wellfound son fuentes fijas de descubrimiento. En IxDF, si la empresa está oculta, conservar la oferta como `IxDF / empresa oculta` con título y URL para poder deduplicarla posteriormente. Intentar identificar la empresa por el contenido antes de descartarla.
+
 Aplicar este orden:
 
 1. Si la empresa usa un ATS con feed/API pública, usarlo directamente. Soportar como mínimo:
@@ -46,7 +54,9 @@ Aplicar este orden:
 
 4. Si el Excel no tiene una URL oficial o solo tiene LinkedIn/InfoJobs/otro agregador, localizar primero la página oficial de careers de la empresa y guardar/cachar ese resultado para futuras ejecuciones.
 
-Los agregadores pueden servir **solo para descubrir** una posible oferta. Una vacante solo cuenta si está confirmada en la web oficial de la empresa o en su ATS oficial.
+Los agregadores sirven activamente para descubrir ofertas. Cuando sea posible, verificar después la misma vacante en la web oficial o ATS. Si no se encuentra la fuente oficial pero la oferta parece vigente y relevante, **conservarla** y marcarla como `Agregador sin verificación oficial`.
+
+Clasificar cada oferta como `Oficial/ATS`, `Agregador verificado oficialmente` o `Agregador sin verificación oficial`.
 
 ## Qué puestos buscar
 Filtrar por títulos relacionados con:
@@ -61,7 +71,9 @@ Filtrar por títulos relacionados con:
 No limitar por seniority en la fase de descubrimiento: quiero poder ver también roles Senior, Staff o Lead y decidir después si encajan.
 
 ## Deduplicación
-Mantener `ofertas_vistas.csv` para que una oferta ya revisada no vuelva a aparecer como nueva.
+Antes de llamar a una oferta `Nueva`, comprobarla contra **AMBOS** históricos: `ofertas_vistas.csv` y `Job Hunting 2026.xlsx`. Comparar empresa + título + URL y variantes obvias del título. Si el Excel no puede comprobarse de forma completa o hay dudas, usar `posible repetida` o `posible nueva`, nunca `Nueva`.
+
+Mantener `ofertas_vistas.csv` como índice ligero de ofertas revisadas. Registrar solo los datos necesarios para deduplicación; no guardar copias completas de cada descripción.
 
 Normalizar las URLs para ignorar parámetros de tracking. Cuando dos requisiciones distintas correspondan claramente al mismo puesto real, señalarlas como posible duplicado para revisión.
 
