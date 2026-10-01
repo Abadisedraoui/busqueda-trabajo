@@ -58,6 +58,23 @@ Los agregadores sirven activamente para descubrir ofertas. Cuando sea posible, v
 
 Clasificar cada oferta como `Oficial/ATS`, `Agregador verificado oficialmente` o `Agregador sin verificación oficial`.
 
+## Sistema de descubrimiento fuera de LinkedIn
+
+LinkedIn es una fuente más, no el centro del sistema. Además de buscar vacantes publicadas, cada barrido debe intentar detectar tres tipos de oportunidad:
+
+1. **Ofertas nuevas**: vacantes relevantes encontradas en portales especializados, careers pages, ATS y agregadores, aunque no estén publicadas en LinkedIn.
+2. **Señales de contratación**: empresas compatibles con el perfil que estén ampliando equipos de Product/Engineering/Design, entrando en España/Europa, levantando financiación o mostrando otras señales recientes de crecimiento que puedan anticipar contratación de diseño. Estas señales no cuentan como ofertas y deben ir separadas.
+3. **Puertas de entrada fuera del anuncio**: cuando exista una empresa u oferta especialmente interesante, localizar vías razonables y concretas como recruiters especializados en Product/UX, equipo de Talent de la empresa, comunidades profesionales, eventos, referrals o contactos relevantes. No generar outreach masivo ni mensajes genéricos.
+
+Añadir también un enfoque de **reverse search**: descubrir empresas que encajen especialmente con el perfil aunque todavía no tengan una vacante de diseño visible. Priorizar B2B SaaS, plataformas complejas, edtech, accessibility, design systems, AI/productivity tools y compañías con equipos Product + Engineering. Incluirlas solo cuando exista una señal concreta que justifique vigilarlas.
+
+El informe diario debe separar claramente:
+- **Ofertas nuevas**
+- **Empresas con señales de contratación**
+- **Puertas de entrada / oportunidades fuera del anuncio**
+
+No presentar una señal de contratación como si fuera una vacante. No saturar el informe con noticias corporativas genéricas: incluir solo señales recientes y accionables.
+
 ## Qué puestos buscar
 Filtrar por títulos relacionados con:
 - Product Designer / Product Design
