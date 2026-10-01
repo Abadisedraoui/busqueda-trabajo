@@ -26,10 +26,10 @@ Cada fila de `watchlist_consolidado.xlsx` debe terminar cada día en uno de esto
 
 La búsqueda tiene dos capas:
 
-- **Barrido abierto del mercado** para descubrir empresas y vacantes fuera de la watchlist. Usar activamente LinkedIn, Indeed, Glassdoor, InfoJobs, Jobgether, Google Jobs, **IxDF Jobs** y **Wellfound**, además de otros portales relevantes.
+- **Barrido abierto del mercado** para descubrir empresas y vacantes fuera de la watchlist. Usar activamente LinkedIn, Indeed, Glassdoor, InfoJobs, Jobgether, Google Jobs, **IxDF Jobs**, **Wellfound**, **UI/UX Jobs Board**, **Matcha**, **Himalayas**, **Remote.io** y **YC Work at a Startup**, además de otros portales relevantes.
 - **Watchlist** para revisar las empresas conocidas mediante sus páginas oficiales y ATS.
 
-IxDF y Wellfound son fuentes fijas de descubrimiento. En IxDF, si la empresa está oculta, conservar la oferta como `IxDF / empresa oculta` con título y URL para poder deduplicarla posteriormente. Intentar identificar la empresa por el contenido antes de descartarla.
+IxDF, Wellfound, UI/UX Jobs Board, Matcha, Himalayas, Remote.io y YC Work at a Startup son fuentes fijas de descubrimiento. En IxDF, si la empresa está oculta, conservar la oferta como `IxDF / empresa oculta` con título y URL para poder deduplicarla posteriormente. Intentar identificar la empresa por el contenido antes de descartarla.
 
 Aplicar este orden:
 
