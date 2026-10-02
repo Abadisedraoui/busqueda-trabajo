@@ -1,0 +1,41 @@
+name: Daily art opportunity search
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "45 7 * * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: daily-art-search
+  cancel-in-progress: false
+
+jobs:
+  search:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: "pip"
+      - name: Install dependencies
+        run: pip install -r arte-empleo/requirements.txt
+      - name: Search art opportunities
+        run: python arte-empleo/check_art_opportunities.py
+      - name: Commit results if changed
+        run: |
+          git config user.name "art-search-bot"
+          git config user.email "art-search-bot@users.noreply.github.com"
+          git add arte-empleo/nuevas_oportunidades.csv arte-empleo/all_open_art_opportunities.csv arte-empleo/opportunities_seen.csv arte-empleo/coverage_report_arte.csv arte-empleo/daily_art_report.md
+          if git diff --cached --quiet; then
+            echo "No changes"
+          else
+            git commit -m "art search $(date -u +'%Y-%m-%d')"
+            git push
+          fi
