@@ -1,10 +1,10 @@
 source_name,url,status,http_status,links_scanned,relevant_found,error,checked_at
-Museo Nacional del Prado,https://www.museodelprado.es/museo/empleo,blocked,403,0,0,,2026-10-05T16:22:49.433839+00:00
-Museo Reina Sofía,https://www.museoreinasofia.es/museo/empleo-becas-concursos/,checked_relevant_found,200,394,144,,2026-10-05T16:22:49.433839+00:00
-Museo Nacional Thyssen-Bornemisza,https://www.museothyssen.org/empleo,checked_relevant_found,200,69,1,,2026-10-05T16:22:49.433839+00:00
-Matadero Madrid,https://www.mataderomadrid.org/convocatorias,checked_relevant_found,200,91,33,,2026-10-05T16:22:49.433839+00:00
-La Casa Encendida,https://www.lacasaencendida.es/convocatorias,checked_relevant_found,200,112,33,,2026-10-05T16:22:49.433839+00:00
-Comunidad de Madrid - Artes visuales,https://www.comunidad.madrid/cultura/ayudas-concursos-seleccion-proyectos-artes-visuales,error,404,0,0,HTTP 404,2026-10-05T16:22:49.433839+00:00
-Comunidad de Madrid - Convocatorias jóvenes,https://www.comunidad.madrid/juventud/convocatorias,error,404,0,0,HTTP 404,2026-10-05T16:22:49.433839+00:00
-Grupo MT,https://www.mtgrupo.com/empleo,checked_relevant_found,200,248,19,,2026-10-05T16:22:49.433839+00:00
-MagmaCultura,https://talent.magmacultura.com/jobs,checked_relevant_found,200,57,8,,2026-10-05T16:22:49.433839+00:00
+Museo Nacional del Prado,https://www.museodelprado.es/museo/empleo,blocked,403,0,0,,2026-10-06T14:27:49.818741+00:00
+Museo Reina Sofía,https://www.museoreinasofia.es/museo/empleo-becas-concursos/,checked_relevant_found,200,394,144,,2026-10-06T14:27:49.818741+00:00
+Museo Nacional Thyssen-Bornemisza,https://www.museothyssen.org/empleo,checked_relevant_found,200,69,1,,2026-10-06T14:27:49.818741+00:00
+Matadero Madrid,https://www.mataderomadrid.org/convocatorias,checked_relevant_found,200,91,33,,2026-10-06T14:27:49.818741+00:00
+La Casa Encendida,https://www.lacasaencendida.es/convocatorias,checked_relevant_found,200,112,33,,2026-10-06T14:27:49.818741+00:00
+Comunidad de Madrid - Artes visuales,https://www.comunidad.madrid/cultura/ayudas-concursos-seleccion-proyectos-artes-visuales,error,404,0,0,HTTP 404,2026-10-06T14:27:49.818741+00:00
+Comunidad de Madrid - Convocatorias jóvenes,https://www.comunidad.madrid/juventud/convocatorias,error,404,0,0,HTTP 404,2026-10-06T14:27:49.818741+00:00
+Grupo MT,https://www.mtgrupo.com/empleo,checked_relevant_found,200,248,19,,2026-10-06T14:27:49.818741+00:00
+MagmaCultura,https://talent.magmacultura.com/jobs,error,400,0,0,HTTP 400,2026-10-06T14:27:49.818741+00:00
