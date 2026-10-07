@@ -16,8 +16,7 @@ New opportunities: 0
 - Sin novedades detectadas.
 
 ## Cobertura / problemas
-- Fuentes con incidencia: 4
+- Fuentes con incidencia: 3
 - Museo Nacional del Prado: blocked
 - Comunidad de Madrid - Artes visuales: error HTTP 404
 - Comunidad de Madrid - Convocatorias jóvenes: error HTTP 404
-- MagmaCultura: error HTTP 400
