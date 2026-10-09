@@ -1,7 +1,7 @@
 # Daily art opportunity report
 
 Checked: 9 sources
-New opportunities: 1
+New opportunities: 0
 
 ## Empleo
 - Sin novedades detectadas.
@@ -13,7 +13,7 @@ New opportunities: 1
 - Sin novedades detectadas.
 
 ## Convocatorias / residencias
-- [Resolución Convocatoria Intermediae Distribuido 2026_2027](https://www.mataderomadrid.org/sites/default/files/media/document/2026/10/Resolucio%CC%81n%20Convocatoria%20Intermediae%20Distribuido%202026_2027..pdf) — Matadero Madrid
+- Sin novedades detectadas.
 
 ## Cobertura / problemas
 - Fuentes con incidencia: 3
