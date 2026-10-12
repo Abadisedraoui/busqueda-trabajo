@@ -58,6 +58,7 @@ from openpyxl import load_workbook
 
 BASE = Path(__file__).resolve().parent
 WATCHLIST = BASE / "watchlist_consolidado.xlsx"
+EXTRA_WATCHLIST = BASE / "empresas_adicionales.csv"
 SEEN_CSV = BASE / "ofertas_vistas.csv"
 NEW_CSV = BASE / "nuevas_ofertas.csv"
 OPEN_CSV = BASE / "all_open_design_jobs.csv"
@@ -365,6 +366,27 @@ def load_watchlist(path: Path) -> list[CompanyRow]:
         platform = values[idx["plataforma_ats"]] if idx["plataforma_ats"] < len(values) else ""
         notes = values[idx.get("notas", -1)] if "notas" in idx and idx["notas"] < len(values) else ""
         rows.append(CompanyRow(n, str(company).strip(), str(url or "").strip(), str(platform or "").strip().lower(), str(notes or "").strip()))
+    # Empresas adicionales incorporadas sin modificar el Excel principal.
+    # Deduplicar por nombre para no revisar dos veces una empresa existente.
+    if EXTRA_WATCHLIST.exists():
+        with EXTRA_WATCHLIST.open(newline="", encoding="utf-8-sig") as f:
+            reader = csv.DictReader(f)
+            required_extra = {"empresa", "web_empleo", "plataforma_ats"}
+            if not required_extra.issubset(set(reader.fieldnames or [])):
+                raise RuntimeError("Faltan columnas en empresas_adicionales.csv")
+            existing = {norm(r.company) for r in rows}
+            for line_no, extra in enumerate(reader, start=2):
+                company = (extra.get("empresa") or "").strip()
+                if not company or norm(company) in existing:
+                    continue
+                rows.append(CompanyRow(
+                    line_no,
+                    company,
+                    (extra.get("web_empleo") or "").strip(),
+                    (extra.get("plataforma_ats") or "").strip().lower(),
+                    (extra.get("notas") or "").strip(),
+                ))
+                existing.add(norm(company))
     return rows
 
 
