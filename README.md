@@ -18,6 +18,14 @@ La búsqueda es deliberadamente amplia. Incluye, entre otras variaciones:
 
 Se excluyen falsos positivos claros de diseño físico/ingeniería como `Product Design Engineer`, CAD, Mechanical o Industrial Designer. Los puestos Head/Lead/Manager **sí se detectan**: se decide después si encajan mediante las reglas de puntuación.
 
+## Empresas adicionales a vigilar
+
+`empresas_adicionales.csv` permite incorporar nuevas agencias o empresas sin modificar el Excel principal. La búsqueda procesa ambas fuentes y evita duplicados por nombre.
+
+- **Digisourced** — [ofertas para clientes](https://www.digisourced.com/jobs). Vigilar nuevas oportunidades de Product / UX / UI / Design Systems compatibles con trabajo desde España/Europa. La oportunidad **UI/UX Designer (UI Focus), 250–275 €/día, hasta 31/12/2026** fue comunicada como **en pausa el 12/10/2026**; no tratarla como vacante abierta ni volver a postularse a la misma automáticamente.
+- La página pública puede requerir JavaScript: si no se logra comprobar el listado, no interpretar cero resultados como ausencia de vacantes.
+- **La ejecución programada de GitHub Actions permanece pausada por cuota**. Añadir la fuente no reactiva por sí solo la vigilancia diaria.
+
 ## Cómo reduce fallos
 
 1. Procesa cada fila y la registra en `coverage_report.csv`.
