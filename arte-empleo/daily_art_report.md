@@ -1,7 +1,7 @@
 # Daily art opportunity report
 
 Checked: 9 sources
-New opportunities: 1
+New opportunities: 0
 
 ## Empleo
 - Sin novedades detectadas.
@@ -13,7 +13,7 @@ New opportunities: 1
 - Sin novedades detectadas.
 
 ## Convocatorias / residencias
-- [Bases de la convocatoria [12/10/2026]](https://www.boe.es/boe/dias/2026/10/12/pdfs/BOE-A-2026-21183.pdf) — Museo Reina Sofía
+- Sin novedades detectadas.
 
 ## Cobertura / problemas
 - Fuentes con incidencia: 3
