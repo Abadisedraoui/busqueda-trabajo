@@ -1,7 +1,7 @@
 # Daily art opportunity report
 
 Checked: 9 sources
-New opportunities: 0
+New opportunities: 1
 
 ## Empleo
 - Sin novedades detectadas.
@@ -13,7 +13,7 @@ New opportunities: 0
 - Sin novedades detectadas.
 
 ## Convocatorias / residencias
-- Sin novedades detectadas.
+- [Programadores Puwerty 2027 - 2028 Buscamos equipo de programación para las ediciones de Puwerty de 2027 y 2028.](https://www.lacasaencendida.es/convocatorias/puwerty-2026-1/programadores-puwerty-2027-2028) — La Casa Encendida
 
 ## Cobertura / problemas
 - Fuentes con incidencia: 3
