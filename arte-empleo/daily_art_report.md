@@ -1,7 +1,7 @@
 # Daily art opportunity report
 
 Checked: 9 sources
-New opportunities: 0
+New opportunities: 1
 
 ## Empleo
 - Sin novedades detectadas.
@@ -13,7 +13,7 @@ New opportunities: 0
 - Sin novedades detectadas.
 
 ## Convocatorias / residencias
-- Sin novedades detectadas.
+- [Lista provisional de personas admitidas y excluidas [19/10/2026]](https://cms.museoreinasofia.es/sites/default/files/Recursos/report_Lista admitidos y excluidos Becas BDE_PROVISIONAL.pdf) — Museo Reina Sofía
 
 ## Cobertura / problemas
 - Fuentes con incidencia: 3
