@@ -1,7 +1,7 @@
 # Daily art opportunity report
 
 Checked: 9 sources
-New opportunities: 2
+New opportunities: 0
 
 ## Empleo
 - Sin novedades detectadas.
@@ -13,7 +13,7 @@ New opportunities: 2
 - Sin novedades detectadas.
 
 ## Convocatorias / residencias
-- [ResoluciÃ³n por la que se nombra la ComisiÃ³n de ValoraciÃ³n [21/10/2026] (Empleo, becas y concursos)](https://cms.museoreinasofia.es/sites/default/files/Museo/report_Resolucion_nombramiento_Comision.pdf) — Museo Reina Sofía
+- Sin novedades detectadas.
 
 ## Cobertura / problemas
 - Fuentes con incidencia: 3
