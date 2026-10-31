@@ -1,7 +1,7 @@
 # Daily art opportunity report
 
 Checked: 9 sources
-New opportunities: 1
+New opportunities: 0
 
 ## Empleo
 - Sin novedades detectadas.
@@ -13,7 +13,7 @@ New opportunities: 1
 - Sin novedades detectadas.
 
 ## Convocatorias / residencias
-- [Listado provisional de admitidos y excluidos [30/10/2026]](https://cms.museoreinasofia.es/sites/default/files/Museo/report_Lista_Provisional_Admitidos_Excluidos Becas_Esteban_Vicente.pdf) — Museo Reina Sofía
+- Sin novedades detectadas.
 
 ## Cobertura / problemas
 - Fuentes con incidencia: 3
