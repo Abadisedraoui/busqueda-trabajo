@@ -1,7 +1,7 @@
 # Daily art opportunity report
 
 Checked: 9 sources
-New opportunities: 0
+New opportunities: 3
 
 ## Empleo
 - Sin novedades detectadas.
@@ -13,7 +13,9 @@ New opportunities: 0
 - Sin novedades detectadas.
 
 ## Convocatorias / residencias
-- Sin novedades detectadas.
+- [ResoluciÃ³n por la que se publica la valoraciÃ³n de mÃ©ritos provisional [3/11/2026]](https://cms.museoreinasofia.es/sites/default/files/Museo/report_07 - Resolucion_Valoracion fase de concurso_Desarrollo comercial.pdf) — Museo Reina Sofía
+- [ResoluciÃ³n por la que se publica la valoraciÃ³n de mÃ©ritos [3/11/2026]](https://cms.museoreinasofia.es/sites/default/files/Museo/report_07 - Resolucion_Valoracion Fase de Concurso_Prensa.pdf) — Museo Reina Sofía
+- [Electrónica en el Club 2027 Una oportunidad para comisarios emergentes de programar dos noches dentro de Electrónica en Abril 2027, como parte del proyecto europeo TMLAB.](https://www.lacasaencendida.es/convocatorias/electronica-en-abril-2027/electronica-en-el-club-2027) — La Casa Encendida
 
 ## Cobertura / problemas
 - Fuentes con incidencia: 3
