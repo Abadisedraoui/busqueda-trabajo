@@ -1,7 +1,7 @@
 # Daily art opportunity report
 
 Checked: 9 sources
-New opportunities: 3
+New opportunities: 0
 
 ## Empleo
 - Sin novedades detectadas.
@@ -13,8 +13,7 @@ New opportunities: 3
 - Sin novedades detectadas.
 
 ## Convocatorias / residencias
-- [ResoluciÃ³n por la que se publica la valoraciÃ³n de mÃ©ritos provisional [4/11/2026]](https://cms.museoreinasofia.es/sites/default/files/Museo/report_07 - Resolucion_Valoracion fase de concurso_Arte Contemporaneo.pdf) — Museo Reina Sofía
-- [Resolución convocatoria](https://www.mataderomadrid.org/sites/default/files/media/document/2026/11/resolucion_residencia_bandas_2027.pdf) — Matadero Madrid
+- Sin novedades detectadas.
 
 ## Cobertura / problemas
 - Fuentes con incidencia: 3
