@@ -46,7 +46,7 @@ def main():
     seen_urls, seen_signatures, seen_fingerprints = load_seen()
     found, coverage, unique = [], [], set()
     for index, source in enumerate(sources, 1):
-        company, ats, url = (source.get(k) or "").strip() for k in ("empresa", "ats", "url")
+        company, ats, url = [(source.get(k) or "").strip() for k in ("empresa", "ats", "url")]
         print(f"[{index}/{len(sources)}] {company} ({ats})", flush=True)
         entry = {"empresa": company, "ats": ats, "url": url, "estado": "", "ofertas_totales": 0, "ofertas_diseno": 0, "error": ""}
         try:
