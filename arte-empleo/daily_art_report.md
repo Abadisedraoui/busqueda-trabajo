@@ -1,7 +1,7 @@
 # Daily art opportunity report
 
 Checked: 9 sources
-New opportunities: 0
+New opportunities: 3
 
 ## Empleo
 - Sin novedades detectadas.
