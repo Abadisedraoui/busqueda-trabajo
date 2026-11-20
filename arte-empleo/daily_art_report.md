@@ -13,7 +13,7 @@ New opportunities: 1
 - Sin novedades detectadas.
 
 ## Convocatorias / residencias
-- [Listado definitivo de personas admitidas y excluidas [19/11/2026]](https://cms.museoreinasofia.es/sites/default/files/Recursos/report_Lista_Definitiva_Admitidos_Excluidos Becas_Esteban_Vicente_MNCARS.pdf) — Museo Reina Sofía
+- Sin novedades detectadas.
 
 ## Cobertura / problemas
 - Fuentes con incidencia: 3
