@@ -1,7 +1,7 @@
 # Daily art opportunity report
 
 Checked: 9 sources
-New opportunities: 3
+New opportunities: 2
 
 ## Empleo
 - Sin novedades detectadas.
@@ -13,8 +13,7 @@ New opportunities: 3
 - Sin novedades detectadas.
 
 ## Convocatorias / residencias
-- [ResoluciÃ³n por la que se publica la valoraciÃ³n de mÃ©ritos definitiva [23/11/2026]](https://cms.museoreinasofia.es/sites/default/files/Recursos/report_20 - Resolucion_Valoracion Definitiva fase de concurso_Desarrollo comercial.pdf) — Museo Reina Sofía
-- [ResoluciÃ³n por la que se publica la valoraciÃ³n de mÃ©ritos definitiva [23/11/2026]](https://cms.museoreinasofia.es/sites/default/files/Recursos/report_20 - Resolucion_Valoracion Definitiva Fase de Concurso_Prensa.pdf) — Museo Reina Sofía
+- [RelaciÃ³n de aspirantes que han superado la primera fase y son convocados para la segunda [24/11/2026]](https://cms.museoreinasofia.es/sites/default/files/Recursos/01. Resolucion de Fase I y convocatoria de Fase II_2026_Esteban_Vicente_signed.pdf) — Museo Reina Sofía
 
 ## Cobertura / problemas
 - Fuentes con incidencia: 3
