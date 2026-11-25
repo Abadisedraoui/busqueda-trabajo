@@ -1,7 +1,7 @@
 # Daily art opportunity report
 
 Checked: 9 sources
-New opportunities: 2
+New opportunities: 1
 
 ## Empleo
 - Sin novedades detectadas.
@@ -13,7 +13,7 @@ New opportunities: 2
 - Sin novedades detectadas.
 
 ## Convocatorias / residencias
-- [RelaciÃ³n de aspirantes que han superado la primera fase y son convocados para la segunda [24/11/2026]](https://cms.museoreinasofia.es/sites/default/files/Recursos/01. Resolucion de Fase I y convocatoria de Fase II_2026_Esteban_Vicente_signed.pdf) — Museo Reina Sofía
+- [Humus Film Fest 2027 Una nueva edición del festival de cortometrajes ambientales: historias esperanzadoras, poéticas, surrealistas o críticas que imaginen futuros posibles y nos conecten con los desafíos del planeta.](https://www.lacasaencendida.es/convocatorias/salvajes-silvestres-y-espontaneas-2027/humus-film-fest-2027) — La Casa Encendida
 
 ## Cobertura / problemas
 - Fuentes con incidencia: 3
