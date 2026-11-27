@@ -1,7 +1,7 @@
 # Daily art opportunity report
 
 Checked: 9 sources
-New opportunities: 1
+New opportunities: 2
 
 ## Empleo
 - Sin novedades detectadas.
@@ -13,7 +13,8 @@ New opportunities: 1
 - Sin novedades detectadas.
 
 ## Convocatorias / residencias
-- [RelaciÃ³n de aspirantes que han superado la primera fase y son convocados para la segunda [26/11/2026]](https://cms.museoreinasofia.es/sites/default/files/Recursos/01. Resolucion de Fase I y convocatoria de Fase II_2026_signed.pdf) — Museo Reina Sofía
+- [Bases de la convocatoria [27/11/2026]](https://cms.museoreinasofia.es/sites/default/files/Recursos/report_Resolucion convocatoria BECAS Banco Espana 2027.pdf) — Museo Reina Sofía
+- [Resultado final de las valoraciones [27/11/2026]](https://cms.museoreinasofia.es/sites/default/files/Recursos/Propuesta de resolucion de Becas_EV_ MNCARS - 2026_signed.pdf) — Museo Reina Sofía
 
 ## Cobertura / problemas
 - Fuentes con incidencia: 3
