@@ -10,6 +10,13 @@ Soy Zainab Abadi, Product & UX/UI Designer basada en Madrid, con 4+ años de exp
 
 Quiero un sistema de búsqueda de empleo **automatizado, auditable y conservador**. El objetivo es detectar vacantes nuevas de Product Designer / UX/UI / Product Design en las empresas indicadas y ayudarme a priorizarlas por encaje real con mi experiencia.
 
+## Orden obligatorio de ejecución y cobertura
+
+1. **Primero ATS**: ejecutar `py ats_discovery.py` para consultar todos los boards de `ats_discovery_sources.csv` y conservar **todas** las ofertas digitales relevantes, sin límite de tres ni selección prematura. Los tres archivos de salida son `ats_discovery_all.csv`, `ats_discovery_candidates.csv` y `ats_discovery_coverage.csv`. Cada board registra éxito o error. Las candidatas sin coincidencia en `ofertas_vistas.csv` son `posible_nueva_tracker_pendiente`, nunca `Nueva` sin cotejar también el tracker vivo.
+2. **Después watchlist**: cubrir toda la watchlist en un ciclo de siete días (distribución determinista por fila, sin omitir empresas); publicar cuántas empresas se revisaron y cuáles fallaron. El script histórico `check_all_companies.py` todavía procesa la lista completa y necesita soporte explícito para el ciclo; no afirmar que el ciclo está automatizado hasta implementarlo.
+3. **Después barrido abierto** de portales y reverse search. Las fuentes sin acceso o sin resultados comprobables deben aparecer como pendientes, no como cero ofertas.
+4. **Salida completa**: inventario de todas las candidatas, con ranking y un resumen de 10–15 al principio; nunca limitar el descubrimiento ni el CSV a tres anuncios. Separar ofertas, señales de contratación y contactos accionables.
+
 ## Regla principal: revisar TODAS las empresas
 No quiero un script que solo revise las empresas con Greenhouse, Lever o Ashby y omita el resto.
 
